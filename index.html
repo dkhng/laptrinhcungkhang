@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ứng dụng web</title>
+		<style type="text/css">
+body >div
+		{
+			margin: 0px auto;
+			display: flex;
+		}
+		div div {
+			text-align: center;
+			margin: 0, 20px;
+			width: 200px;
+			padding: 90px;
+		}
+		div div a{
+			display: block;
+			padding: 15px 0px;
+			font-weight: bold;
+			text-decoration: none;
+			text-transform: uppercase;
+			color:#d11313;
+			position: relative;
+		}
+		div div a::after{
+			content: "";
+			height: 5px;
+			width: 0px;
+			background: rgb(255, 0, 0);
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			transition: all 0.5s ease-in-out;
+		}
+		div div a:hover::after{
+				width: 100%;
+		}		</style>
+
+</head>
+	<body>
+		<h1 style="color:rgb(245, 0, 0); text-align: center; text-shadow: 2px 2px rgb(130, 106, 106);">LẬP TRÌNH WEB</h1></div>
+		<div>
+			<div>
+				<h2>
+					<a style="text-shadow: 2px 2px rgb(209, 208, 208);" href="web.html">HTML</a></h2>
+				<a href="web.html"> <img height="300" src="images/html.jpg" width="200" /> </a></div>
+			<div>
+				<h2>
+					<a style="text-shadow: 2px 2px rgb(209, 208, 208);"href="css.html">CSS</a></h2>
+				<a href="css.html"> <img height="300" src="images/css.jpg" width="200" /> </a></div>
+			<div>
+				<h2>
+					<a style="text-shadow: 2px 2px rgb(209, 208, 208);"href="javascript.html">JAVASCRIPT</a></h2>
+				<a href="javascript.html"> <img height="300" src="images/javascript.jpg" width="200" /> </a></div>
+			<div>
+				<h2>
+					<a style="text-shadow: 2px 2px rgb(209, 208, 208);" href="jquery.html">JQUERY</a></h2>
+				<a href="jquery.html"> <img height="300" src="images/jQuery.jpg" width="200" /> </a></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        table, td{
+            text-align: left;
+            border: 1px solid black; 
+            width: 400px;
+        }
+
+        td:nth-last-child(1){
+            width: 300px;
+        }
+
+        table{
+            background-color: rgb(248, 190, 120);
+            margin: auto;
+        }
+        button{
+            margin: 1px 2px;
+        }
+        p{
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    <script>    
+function my_math(){
+    var a = document.getElementById('bien_a').value;
+    var b = document.getElementById('bien_b').value;
+    var c = document.getElementById('bien_c').value;
+
+    var denta = b*2 - (4*a*c);
+    if(denta > 0)
+    {
+        var x1 = ((-1*b) + Math.sqrt(denta))/(2*a);
+        var x2 = ((-1*b) - Math.sqrt(denta))/(2*a);
+        document.getElementById('kq').innerHTML = "Phương trình có 2 nghiệm là: <br>" + " x1 = " + x1  + "<br>x2 = " + x2; 
+    }
+    if(denta == 0)
+    {
+        var x = ((-1*b)/(2*a));
+        document.getElementById('kq').innerHTML = "Phương trình có nghiệm là: " + "x = " + x; 
+
+    }
+    if(denta < 0)
+    {
+        document.getElementById('kq').innerHTML = "Phương trình vô nghiệm !"; 
+    }
+}
+
+    </script>
+</head>
+<body>
+    <div>
+        <h2>CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH BẬC 2</h2>
+        <table>
+            <conten><h3>ax<sup>2</sup> + bx + c = 0</h3></conten>
+            <tr>
+                <td>a = </td>
+                <td><input type="number" id="bien_a"></td>
+            </tr>
+            <tr>
+                <td>b = </td>
+                <td><input type="number" id="bien_b"></td>
+            </tr>
+            <tr>
+                <td>c = </td>
+                <td><input type="number" id="bien_c"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="my_math()">Giải</button>
+                    <button onclick="xoa()">Xóa</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p id="kq"></p>
+</body>
+</html>

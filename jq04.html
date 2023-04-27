@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("div div").click(function()
+            {
+                var c = $(this).css("background-color");
+                console.log(c);
+                var name;
+                switch(c){
+                    case "rgb(255, 0, 0)":
+                        name = "Đỏ";
+                        break;
+                    case "rgb(0, 0, 255)":
+                        name = "Xanh dương";
+                        break;
+                    case "rgb(0, 128, 0)":
+                        name = "Xanh lá";
+                        break;
+                    case "rgb(128, 0, 128)":
+                        name = "Tím";
+                        break;
+                }
+                $("#result").html("Màu bạn chọn là: " + name + ": " + c);
+                $("#result").css({"color": c, "font-weight" : "bold"});
+                $("#frame").css("background-color", c);
+            });
+        });
+    </script>
+    <style>
+        div div {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            float: left;
+        }
+        #result {
+            clear: left;
+            width: 500px;
+            height: 30px;
+        }
+        #frame {
+            width: 300px;
+            height: 200px;
+            border: 5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <p>Click len cac hinh vuong</p>
+    <div>
+        <div style="background-color: blue;"></div>
+        <div style="background-color: red;"></div>
+        <div style="background-color: purple;"></div>
+        <div style="background-color: green;"></div>
+    </div>    
+    <br>
+    <div id = "result"></div>
+    <p id="frame"></p>
+</body>
+</html>

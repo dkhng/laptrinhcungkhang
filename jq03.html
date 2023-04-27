@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title >Vật tư</title>
+        <style>
+            table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table tr td{
+                width: 30%;
+                border: 1px solid #171c48;
+                padding: 5px;
+            }
+            table tr td{
+                border: 1px solid #030303;
+                padding: 5px;
+                background-color: rgb(137, 195, 246);
+            }
+            .newBrgd{
+                background-color: #798c2e;
+            }
+            caption{font-size: 1em; font-weight: bold;}
+        </style>
+        <script></script>
+        <script>
+            $(document).ready(function(){
+                $("#change").click(function(){
+                    $("tr:odd").addClass("newBrgd");
+                });
+                $("#normal").click(function(){
+                    $("tr:odd").removeClass("newBrgd");
+                });
+            });
+        </script>
+    </head>
+    <body>
+         <table>
+            <caption>BẢNG GIÁ VẬT TƯ</caption>
+            <tr>
+                <th>Tên vật tư</th>
+                <th>Đơn vị tính</th>
+                <th>Đơn giá</th>
+            </tr>
+            <tr>
+                <td>Cát</td>
+                <td>Khối</td>
+                <td>77,000</td>
+            </tr>
+            <tr>
+                <td>Đá</td>
+                <td>Khối</td>
+                <td>90,000</td>
+            </tr>
+            <tr>
+                <td>Xi măng Hà Tiên loại 1</td>
+                <td>Bao</td>
+                <td>120,000</td>
+            </tr>
+            <tr>
+                <td>Xi măng Hà Tiên loại 2</td>
+                <td>Bao</td>
+                <td>100,000</td>
+            </tr>
+            <tr>  
+            </tr>
+         </table>
+         <tr>
+         </tr>
+         <button id="change">Đổi màu nền</button>
+         <button id="normal">Màu nền mặc định</button>
+    </body>
+</html>`

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng cửu chương</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #parent{
+            display: flex;
+		    align-items: center;
+		    justify-content: center;
+        }
+        table,td{
+            border: 1px solid black;
+        }
+        td{
+            font-size: 20px;
+        }
+        td{
+            padding: 5px 13px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BẢNG CỬU CHƯƠNG</h1>
+    <div id="parent">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>  
+    
+    <script>
+        var arr = document.getElementsByTagName('td');
+var bang = "";
+var dem = 0;
+
+for(var i = 2;i <= 9; i++)
+{
+    bang = ""
+    for(var j = 1;j <= 10; j++)
+    {
+        bang += i + " x " + j + " = " + i*j + "<br>";
+    }
+    document.getElementsByTagName("td")[dem].innerHTML = bang;
+    dem++;
+}
+    </script>
+</body>
+</html>

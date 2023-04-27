@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi nền & chữ</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 100px;
+            background-color: #5e61ff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p{
+            line-height: 100px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #F7F80F;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p id="textbox">Hello Guyssssssss !</p>
+    </div>
+    <div>
+        <label for="">Nhập nội dung: </label>
+        <input type="text" id="text" autofocus value="HeLLO body!" size="50">
+        <br> <br>
+        <label for="">Màu nền: </label>
+        <input type="color" id="colorbg" value="#1217EE">
+        <br> <br>
+        <label for="">Màu chữ: </label>
+        <input type="color" id="textcolor" value="#F7F80F">
+        <br> <br>
+        <button onclick="set1()">Thực hiện</button>
+    </div>
+    <script>
+        function set1(){
+            var text = document.getElementById("text").value;
+            document.getElementById("textbox").innerHTML = text;
+            var bg = document.getElementById("colorbg").value;
+            document.getElementById("box").style.backgroundColor = bg;
+            var textcl = document.getElementById("textcolor").value;
+            document.getElementById("textbox").style.color = textcl;
+        }
+    </script>
+</body>
+</html>

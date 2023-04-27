@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi kích thước hình</title>
+    <style>
+        img
+        {
+            border: 1px solid black;
+        }
+        .small{width: 45px; height: auto;}
+        .large{width: 259px; height:auto ;}
+        .medium{width: 114px; height:auto ;}
+        .full{width: 100%; height: auto;}
+    </style>
+</head>
+<body>
+    <h2>Thay đổi kích thước</h2>
+    <hr>
+    Scale: 
+    <input type="radio" name="sizeimg" value="small" onclick="changer_size(this.value)">10%
+    <input type="radio" name="sizeimg" value="medium" onclick="changer_size(this.value)">25%
+    <input type="radio" name="sizeimg" value="large" onclick="changer_size(this.value)" checked>50%
+    <input type="radio" name="sizeimg" value="full" onclick="changer_size(this.value)">100%
+    <br>
+    <img id="img" class="large" src="../images/chim.jpg" alt="">
+    <script>
+        function changer_size(value){
+            document.getElementById("img").className = value;
+        }
+    </script>
+</body>
+</html>

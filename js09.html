@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng chuỗi</title>
+</head>
+<body>
+    <div>
+        Nhập số lượng phần tử:
+        <input id="soluong" type="number" value="10" size="50">
+    </div>
+    <div>
+        <button onclick="taomang()">Tạo mảng</button>
+        <button onclick="tangdan()">Sắp xếp mảng tăng dần</button>
+        <button onclick="giamdan()">Sắp xếp mảng giảm dần</button>
+        <br>
+        <p>Mảng ban đầu: </p>
+        <input type="text" name="" id="arr1" size="50" value="">
+        <p>Mảng tăng dần: </p>
+        <input type="text" name="" id="arr2" size="50" value="">
+        <p>Mảng giảm dần: </p>
+        <input type="text" name="" id="arr3" size="50" value="">
+    </div>
+    <script>
+        function taomang(){
+    var i;
+    var n = parseInt(document.getElementById("soluong").value);
+    arr = new Array(n);//mang toàn cục
+    for(i=0;i<n;i++)
+    {
+        arr[i] = Math.floor(Math.random() * 100 ) % 50;
+    }
+    document.getElementById("arr1").value = arr.join(" ");
+}
+function tang(a, b){
+    return a - b;
+}
+function giam(a, b){
+    return b - a;
+}
+function tangdan(){
+    arr.sort(tang);
+    document.getElementById("arr2").value = arr.join(" ");
+}
+function giamdan(){
+    arr.sort(giam);
+    document.getElementById("arr3").value = arr.join(" ");
+}
+    </script>
+</body>
+</html>
